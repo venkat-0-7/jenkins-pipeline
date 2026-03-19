@@ -1,4 +1,4 @@
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-COPY src/target/webhook-trigger-v1.0-SNAPSHOT.jar app.jar
+COPY target/webhook-trigger-v1.0-SNAPSHOT.jar app.jar
 ENTRYPOINT [ "java", "-jar", "/app/app.jar"]
