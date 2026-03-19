@@ -13,7 +13,7 @@ pipeline{
         }
         stage('build code'){
             steps{
-                dir('jenkins-pipeline') {
+                dir('jenkins-app') {
                     sh 'mvn clean package'
                 }
             }
