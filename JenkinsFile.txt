@@ -13,7 +13,9 @@ pipeline{
         }
         stage('build code'){
             steps{
-                sh 'mvn clean package'
+                dir('jenkins-pipeline') {
+                    sh 'mvn clean package'
+                }
             }
         }
         stage('build & push image'){
